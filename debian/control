@@ -1,0 +1,13 @@
+Source: ros-indigo-dataspeed-pds-can
+Section: misc
+Priority: extra
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-can-msgs, ros-indigo-catkin, ros-indigo-dataspeed-can-msg-filters, ros-indigo-dataspeed-pds-msgs, ros-indigo-message-filters, ros-indigo-nodelet, ros-indigo-roscpp, ros-indigo-roslaunch, ros-indigo-rostest
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-indigo-dataspeed-pds-can
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-can-msgs, ros-indigo-dataspeed-can-usb, ros-indigo-dataspeed-pds-msgs, ros-indigo-message-filters, ros-indigo-nodelet, ros-indigo-roscpp, ros-indigo-roslaunch
+Description: Interface to the Dataspeed Inc.
+ Power Distribution System (PDS) via CAN
