@@ -1,0 +1,40 @@
+ros-indigo-dataspeed-pds-scripts (1.0.2-0trusty) trusty; urgency=high
+
+
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Fri, 29 Jun 2018 04:00:00 -0000
+
+ros-indigo-dataspeed-pds-scripts (1.0.1-0trusty) trusty; urgency=high
+
+
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Thu, 28 Jun 2018 04:00:00 -0000
+
+ros-indigo-dataspeed-pds-scripts (1.0.0-0trusty) trusty; urgency=high
+
+  * Updated scripts for new topics and message types
+  * Contributors: Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Wed, 25 Apr 2018 04:00:00 -0000
+
+ros-indigo-dataspeed-pds-scripts (0.1.2-0trusty) trusty; urgency=high
+
+
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Wed, 11 Apr 2018 04:00:00 -0000
+
+ros-indigo-dataspeed-pds-scripts (0.1.1-0trusty) trusty; urgency=high
+
+  * Fixed script licenses
+  * Contributors: Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Thu, 07 Sep 2017 04:00:00 -0000
+
+ros-indigo-dataspeed-pds-scripts (0.1.0-0trusty) trusty; urgency=high
+
+  * Initial release
+  * Contributors: Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Thu, 07 Sep 2017 04:00:00 -0000
+
+
