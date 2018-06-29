@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(dataspeed_pds_rqt)
 
-find_package(catkin REQUIRED COMPONENTS 
-  roslaunch
+find_package(catkin REQUIRED COMPONENTS
   rospy
   rqt_gui
   rqt_gui_py
@@ -18,7 +17,7 @@ install(DIRECTORY images resource
 )
 
 install(PROGRAMS scripts/dataspeed_pds_rqt
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(FILES plugin.xml
