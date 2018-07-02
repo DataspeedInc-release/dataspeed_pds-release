@@ -1,0 +1,13 @@
+Source: ros-kinetic-dataspeed-pds-msgs
+Section: misc
+Priority: extra
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-message-generation, ros-kinetic-std-msgs
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-dataspeed-pds-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-message-runtime, ros-kinetic-rosbag-migration-rule, ros-kinetic-std-msgs
+Description: Messages for the Dataspeed Inc.
+ Power Distribution System (PDS)
