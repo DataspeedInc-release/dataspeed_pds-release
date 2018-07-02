@@ -1,0 +1,13 @@
+Source: ros-kinetic-dataspeed-pds-rqt
+Section: misc
+Priority: extra
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-dataspeed-pds-msgs, ros-kinetic-python-qt-binding, ros-kinetic-rospy, ros-kinetic-rqt-gui, ros-kinetic-rqt-gui-py
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-dataspeed-pds-rqt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-dataspeed-pds-msgs, ros-kinetic-python-qt-binding, ros-kinetic-rospy, ros-kinetic-rqt-gui, ros-kinetic-rqt-gui-py
+Description: ROS rqt GUI for the Dataspeed Inc.
+ Power Distribution System (PDS)
