@@ -1,0 +1,13 @@
+Source: ros-kinetic-dataspeed-pds-can
+Section: misc
+Priority: extra
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-can-msgs, ros-kinetic-catkin, ros-kinetic-dataspeed-can-msg-filters, ros-kinetic-dataspeed-pds-msgs, ros-kinetic-message-filters, ros-kinetic-nodelet, ros-kinetic-roscpp, ros-kinetic-roslaunch, ros-kinetic-rostest
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-dataspeed-pds-can
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-can-msgs, ros-kinetic-dataspeed-can-usb, ros-kinetic-dataspeed-pds-msgs, ros-kinetic-message-filters, ros-kinetic-nodelet, ros-kinetic-roscpp, ros-kinetic-roslaunch
+Description: Interface to the Dataspeed Inc.
+ Power Distribution System (PDS) via CAN
