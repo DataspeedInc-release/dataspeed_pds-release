@@ -1,0 +1,13 @@
+Source: ros-melodic-dataspeed-pds-scripts
+Section: misc
+Priority: extra
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dataspeed-pds-scripts
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dataspeed-pds-msgs, ros-melodic-rospy
+Description: Test scripts to interface to the Dataspeed Inc.
+ Power Distribution System (PDS)
