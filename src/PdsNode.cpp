@@ -54,21 +54,13 @@ PdsNode::PdsNode(ros::NodeHandle &node, ros::NodeHandle &priv_nh)
 
   // Reduce synchronization delay
   const ros::Duration SYNC_50_MS(0.016); // 30% of 50ms period
-  for (unsigned int i = 0; i < 5; i++) {
-    sync_can_master_.setInterMessageLowerBound(i, SYNC_50_MS);
-    sync_can_slave1_.setInterMessageLowerBound(i, SYNC_50_MS);
-    sync_can_slave2_.setInterMessageLowerBound(i, SYNC_50_MS);
-    sync_can_slave3_.setInterMessageLowerBound(i, SYNC_50_MS);
-  }
-  sync_ros_slave1_->setInterMessageLowerBound(0, SYNC_50_MS);
-  sync_ros_slave1_->setInterMessageLowerBound(1, SYNC_50_MS);
-  sync_ros_slave2_->setInterMessageLowerBound(0, SYNC_50_MS);
-  sync_ros_slave2_->setInterMessageLowerBound(1, SYNC_50_MS);
-  sync_ros_slave2_->setInterMessageLowerBound(2, SYNC_50_MS);
-  sync_ros_slave3_->setInterMessageLowerBound(0, SYNC_50_MS);
-  sync_ros_slave3_->setInterMessageLowerBound(1, SYNC_50_MS);
-  sync_ros_slave3_->setInterMessageLowerBound(2, SYNC_50_MS);
-  sync_ros_slave3_->setInterMessageLowerBound(3, SYNC_50_MS);
+  sync_can_master_.setInterMessageLowerBound(SYNC_50_MS);
+  sync_can_slave1_.setInterMessageLowerBound(SYNC_50_MS);
+  sync_can_slave2_.setInterMessageLowerBound(SYNC_50_MS);
+  sync_can_slave3_.setInterMessageLowerBound(SYNC_50_MS);
+  sync_ros_slave1_->setInterMessageLowerBound(SYNC_50_MS);
+  sync_ros_slave2_->setInterMessageLowerBound(SYNC_50_MS);
+  sync_ros_slave3_->setInterMessageLowerBound(SYNC_50_MS);
 
   // Setup Publishers
   pub_status_ = node.advertise<dataspeed_pds_msgs::Status>("status", 10);
@@ -180,13 +172,13 @@ void PdsNode::recvScript(const dataspeed_pds_msgs::Script::ConstPtr &msg)
 
 void PdsNode::recvSync(const std::vector<can_msgs::Frame::ConstPtr> &msgs, UnitId id)
 {
-  ROS_ASSERT((MASTER >= id) && (id <= SLAVE3));
+  ROS_ASSERT((MASTER <= id) && (id <= SLAVE3));
   ROS_ASSERT(msgs.size() == 5);
-  ROS_ASSERT(msgs[0]->id == ID_STATUS1_MASTER);
-  ROS_ASSERT(msgs[1]->id == ID_STATUS2_MASTER);
-  ROS_ASSERT(msgs[2]->id == ID_CURRENT1_MASTER);
-  ROS_ASSERT(msgs[3]->id == ID_CURRENT2_MASTER);
-  ROS_ASSERT(msgs[4]->id == ID_CURRENT3_MASTER);
+  ROS_ASSERT(msgs[0]->id == ID_STATUS1_MASTER + id);
+  ROS_ASSERT(msgs[1]->id == ID_STATUS2_MASTER + id);
+  ROS_ASSERT(msgs[2]->id == ID_CURRENT1_MASTER + id);
+  ROS_ASSERT(msgs[3]->id == ID_CURRENT2_MASTER + id);
+  ROS_ASSERT(msgs[4]->id == ID_CURRENT3_MASTER + id);
   if ((msgs[0]->dlc >= sizeof(MsgStatus1))
    && (msgs[1]->dlc >= sizeof(MsgStatus2))
    && (msgs[2]->dlc >= sizeof(MsgCurrent))
