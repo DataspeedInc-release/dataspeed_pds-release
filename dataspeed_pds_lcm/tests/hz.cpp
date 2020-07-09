@@ -45,7 +45,7 @@ lcm::LCM * g_lcm = NULL;
 
 void timerCallback(const ros::TimerEvent&, int id)
 {
-  ROS_ASSERT((0 >= id) && (id <= 3));
+  ROS_ASSERT((0 <= id) && (id <= 3));
   status_t msg;
   memset(&msg, 0x00, sizeof(msg));
   msg.unit_id = id;
