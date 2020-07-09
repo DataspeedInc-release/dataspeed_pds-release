@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(dataspeed_pds_can)
 
 find_package(catkin REQUIRED COMPONENTS
@@ -9,6 +9,11 @@ find_package(catkin REQUIRED COMPONENTS
   message_filters
   dataspeed_can_msg_filters
 )
+
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+  message(STATUS "Enabling coverage testing")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+endif()
 
 catkin_package(
   INCLUDE_DIRS include
@@ -24,7 +29,7 @@ add_library(${PROJECT_NAME}
   src/nodelet.cpp
   src/PdsNode.cpp
 )
-add_dependencies(${PROJECT_NAME} dataspeed_pds_msgs_gencpp)
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
@@ -32,7 +37,7 @@ target_link_libraries(${PROJECT_NAME}
 add_executable(${PROJECT_NAME}_node
   src/node.cpp
 )
-add_dependencies(${PROJECT_NAME}_node dataspeed_pds_msgs_gencpp)
+add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
 target_link_libraries(${PROJECT_NAME}_node
   ${PROJECT_NAME}
 )
