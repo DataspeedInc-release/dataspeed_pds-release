@@ -1,12 +1,12 @@
-- hg:
+- git:
     local-name: lusb
     uri: https://bitbucket.org/DataspeedInc/lusb
-    version: default
-- hg:
+    version: master
+- git:
     local-name: dataspeed_can
     uri: https://bitbucket.org/DataspeedInc/dataspeed_can
-    version: default
-- hg:
+    version: master
+- git:
     local-name: dataspeed_pds
     uri: https://bitbucket.org/DataspeedInc/dataspeed_pds
-    version: default
+    version: master

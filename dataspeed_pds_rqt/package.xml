@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>dataspeed_pds_rqt</name>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <description>
     ROS rqt GUI for the Dataspeed Inc. Power Distribution System (PDS)
   </description>
@@ -16,6 +16,8 @@
   <url type="bugtracker">https://bitbucket.org/dataspeedinc/dataspeed_pds/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend condition="$ROS_PYTHON_VERSION == 2">python-setuptools</buildtool_depend>
+  <buildtool_depend condition="$ROS_PYTHON_VERSION == 3">python3-setuptools</buildtool_depend>
 
   <depend>rospy</depend>
   <depend>rqt_gui</depend>
