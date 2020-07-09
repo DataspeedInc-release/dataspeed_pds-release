@@ -53,7 +53,7 @@ can_msgs::Frame buildMsg(int unit_id, uint32_t can_id) {
 
 void timerCallback(const ros::TimerEvent&, int id)
 {
-  ROS_ASSERT((0 >= id) && (id <= 3));
+  ROS_ASSERT((0 <= id) && (id <= 3));
   g_pub.publish(buildMsg(id, ID_STATUS1_MASTER));
   g_pub.publish(buildMsg(id, ID_CURRENT1_MASTER));
   g_pub.publish(buildMsg(id, ID_CURRENT2_MASTER));

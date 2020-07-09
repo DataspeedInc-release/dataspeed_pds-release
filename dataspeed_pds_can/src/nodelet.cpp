@@ -43,9 +43,6 @@ namespace dataspeed_pds_can
 class PdsNodelet : public nodelet::Nodelet
 {
 public:
-  PdsNodelet() {}
-  ~PdsNodelet() {}
-
   void onInit(void)
   {
     node_.reset(new PdsNode(getNodeHandle(), getPrivateNodeHandle()));
