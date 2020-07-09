@@ -43,24 +43,17 @@ namespace dataspeed_pds_lcm
 class PdsNodelet : public nodelet::Nodelet
 {
 public:
-  PdsNodelet() {}
-  ~PdsNodelet() {}
-
   void onInit(void)
   {
   	// WARNING
   	//  === UNTESTED ===
   	// WARNING
-
- 	ros::NodeHandle node = getNodeHandle();
- 	ros::NodeHandle priv_nh = getPrivateNodeHandle();
-
     const int ROS_RESPONSE_TIME_MS = 100;
     const float TRY_CONNECT_EVERY_S = 1.0;
     const float WARN_EVERY_S = 10.0;
   
     std::string lcm_url;
-    priv_nh.getParam("lcm_url", lcm_url);
+    getPrivateNodeHandle().getParam("lcm_url", lcm_url);
     if (lcm_url.empty()) {
       lcm_url = "udpm://225.0.0.0:7667?ttl=1";
     }
@@ -77,6 +70,7 @@ public:
       ros::Duration(TRY_CONNECT_EVERY_S).sleep();
     }
     ROS_INFO("LCM connected to %s", lcm_url.c_str());
+
     // TODO: standard conventions will probably not work for lcm->ROS nodelet what do?
     node_.reset(new PdsNode(getNodeHandle(), getPrivateNodeHandle(), lcm));
   }
