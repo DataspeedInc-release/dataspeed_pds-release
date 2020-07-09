@@ -2,6 +2,18 @@
 Changelog for package dataspeed_pds_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.3 (2020-07-09)
+------------------
+* Fix cmake dependency error with catkin_EXPORTED_TARGETS
+* Increase CMake minimum version to 3.0.2 to avoid warning about CMP0048
+  http://wiki.ros.org/noetic/Migration#Increase_required_CMake_version_to_avoid_aut
+* Use fewer function calls to setup message sync (ROS)
+* Use fewer function calls to setup message sync (CAN)
+* Add argument to enable/disable CAN message filtering on DBW message range
+* Enabled code coverage testing when built as debug
+* Fixed bad asserts
+* Contributors: Eric Myllyoja, Kevin Hallenbeck
+
 1.0.2 (2018-06-29)
 ------------------
 

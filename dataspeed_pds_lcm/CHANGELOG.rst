@@ -2,6 +2,15 @@
 Changelog for package dataspeed_pds_lcm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.3 (2020-07-09)
+------------------
+* Fix cmake dependency error with catkin_EXPORTED_TARGETS
+* Increase CMake minimum version to 3.0.2 to avoid warning about CMP0048
+  http://wiki.ros.org/noetic/Migration#Increase_required_CMake_version_to_avoid_aut
+* Enabled code coverage testing when built as debug
+* Fixed bad asserts
+* Contributors: Kevin Hallenbeck
+
 1.0.2 (2018-06-29)
 ------------------
 
