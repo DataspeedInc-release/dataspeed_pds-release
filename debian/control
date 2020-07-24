@@ -1,0 +1,13 @@
+Source: ros-noetic-dataspeed-pds
+Section: misc
+Priority: optional
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-noetic-dataspeed-pds
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-dataspeed-pds-can, ros-noetic-dataspeed-pds-lcm, ros-noetic-dataspeed-pds-msgs, ros-noetic-dataspeed-pds-scripts
+Description: Interface to the Dataspeed Inc.
+ Power Distribution System (PDS)
