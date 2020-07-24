@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>dataspeed_pds_can</name>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <description>
     Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN
   </description>
