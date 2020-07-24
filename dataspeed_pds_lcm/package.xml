@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>dataspeed_pds_lcm</name>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <description>
     Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN
   </description>
@@ -23,7 +23,7 @@
   <depend>message_filters</depend>
 
   <build_depend>liblcm-dev</build_depend>
-  <exec_depend>liblcm1</exec_depend>
+  <exec_depend>liblcm</exec_depend>
 
   <exec_depend>roslaunch</exec_depend>
 

@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.3)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 find_package(PkgConfig REQUIRED)
 find_package(LCM)
-if(NOT LCM_FOUND OR CATKIN_BUILD_BINARY_PACKAGE)
+if(NOT LCM_FOUND)
   # Extract *.tar.gz files in the 3rdparty folder
   FILE(GLOB files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty" "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/*.tar.gz")
   FOREACH(filename ${files})
@@ -14,8 +14,6 @@ if(NOT LCM_FOUND OR CATKIN_BUILD_BINARY_PACKAGE)
       WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty
     )
   ENDFOREACH(filename)
-endif()
-if(NOT LCM_FOUND)
   # Install Debian packages with dpkg
   FILE(GLOB files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty" "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/liblcm1*_amd64.deb")
   STRING(REPLACE ";" " " files "${files}")
