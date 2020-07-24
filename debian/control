@@ -1,0 +1,13 @@
+Source: ros-melodic-dataspeed-pds-lcm
+Section: misc
+Priority: optional
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), liblcm-dev, ros-melodic-catkin, ros-melodic-dataspeed-pds-msgs, ros-melodic-message-filters, ros-melodic-nodelet, ros-melodic-roscpp, ros-melodic-roslaunch
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dataspeed-pds-lcm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblcm1, ros-melodic-dataspeed-pds-msgs, ros-melodic-message-filters, ros-melodic-nodelet, ros-melodic-roscpp, ros-melodic-roslaunch
+Description: Interface to the Dataspeed Inc.
+ Power Distribution System (PDS) via CAN
