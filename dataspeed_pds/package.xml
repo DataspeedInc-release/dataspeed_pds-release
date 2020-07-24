@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>dataspeed_pds</name>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <description>
     Interface to the Dataspeed Inc. Power Distribution System (PDS)
   </description>
@@ -18,6 +18,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <exec_depend>dataspeed_pds_can</exec_depend>
+  <exec_depend>dataspeed_pds_lcm</exec_depend>
   <exec_depend>dataspeed_pds_msgs</exec_depend>
   <exec_depend>dataspeed_pds_scripts</exec_depend>
 

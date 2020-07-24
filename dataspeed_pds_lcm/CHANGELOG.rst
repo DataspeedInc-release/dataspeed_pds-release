@@ -2,6 +2,13 @@
 Changelog for package dataspeed_pds_lcm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.4 (2020-07-24)
+------------------
+* Don't extract the LCM binaries for the buildfarm since they're available for modern distributions
+* Change liblcm dependency to match official rosdep rule
+  https://github.com/ros/rosdistro/pull/25736
+* Contributors: Kevin Hallenbeck
+
 1.0.3 (2020-07-09)
 ------------------
 * Fix cmake dependency error with catkin_EXPORTED_TARGETS
