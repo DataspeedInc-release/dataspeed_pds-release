@@ -2,6 +2,11 @@
 Changelog for package dataspeed_pds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.4 (2020-07-24)
+------------------
+* Add dataspeed_pds_lcm to dataspeed_pds metapackage
+* Contributors: Kevin Hallenbeck
+
 1.0.3 (2020-07-09)
 ------------------
 * Increase CMake minimum version to 3.0.2 to avoid warning about CMP0048
