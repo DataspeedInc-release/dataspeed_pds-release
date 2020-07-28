@@ -1,0 +1,37 @@
+ros-melodic-dataspeed-pds-rqt (1.0.5-1stretch) stretch; urgency=high
+
+
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Tue, 28 Jul 2020 04:00:00 -0000
+
+ros-melodic-dataspeed-pds-rqt (1.0.4-1stretch) stretch; urgency=high
+
+
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Fri, 24 Jul 2020 04:00:00 -0000
+
+ros-melodic-dataspeed-pds-rqt (1.0.3-1stretch) stretch; urgency=high
+
+  * Use setuptools instead of distutils for python
+    http://wiki.ros.org/noetic/Migration#Setuptools_instead_of_Distutils
+  * Increase CMake minimum version to 3.0.2 to avoid warning about CMP0048
+    http://wiki.ros.org/noetic/Migration#Increase_required_CMake_version_to_avoid_aut
+  * Contributors: Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Thu, 09 Jul 2020 04:00:00 -0000
+
+ros-melodic-dataspeed-pds-rqt (1.0.2-1stretch) stretch; urgency=high
+
+  * Removed unnecessary dependency
+  * Contributors: Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Fri, 29 Jun 2018 04:00:00 -0000
+
+ros-melodic-dataspeed-pds-rqt (1.0.1-1stretch) stretch; urgency=high
+
+  * Initial release
+  * Contributors: Eric Myllyoja, Kevin Hallenbeck
+
+ -- Kevin Hallenbeck <khallenbeck@dataspeedinc.com>  Thu, 28 Jun 2018 04:00:00 -0000
+
+
