@@ -2,6 +2,9 @@
 Changelog for package dataspeed_pds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.5 (2020-07-28)
+------------------
+
 1.0.4 (2020-07-24)
 ------------------
 * Add dataspeed_pds_lcm to dataspeed_pds metapackage
