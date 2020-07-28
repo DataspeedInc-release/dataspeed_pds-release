@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>dataspeed_pds_lcm</name>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <description>
     Interface to the Dataspeed Inc. Power Distribution System (PDS) via CAN
   </description>
@@ -28,6 +28,7 @@
   <exec_depend>roslaunch</exec_depend>
 
   <test_depend>roslaunch</test_depend>
+  <test_depend>rostest</test_depend>
 
   <export>
     <nodelet plugin="${prefix}/nodelets.xml" />
