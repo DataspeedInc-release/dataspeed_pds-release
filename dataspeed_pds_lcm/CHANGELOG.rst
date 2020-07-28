@@ -2,6 +2,11 @@
 Changelog for package dataspeed_pds_lcm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.5 (2020-07-28)
+------------------
+* Add missing rostest dependency
+* Contributors: Kevin Hallenbeck
+
 1.0.4 (2020-07-24)
 ------------------
 * Don't extract the LCM binaries for the buildfarm since they're available for modern distributions
