@@ -3,7 +3,7 @@
          type="dataspeed_pds_lcm::PdsNodelet"
          base_class_type="nodelet::Nodelet">
     <description> 
-      Dataspeed Power Distribution System (PDS) nodelet using LCM
+      Dataspeed Intelligent Power Distribution System (iPDS) nodelet using LCM
     </description>
   </class>
 </library>
