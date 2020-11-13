@@ -1,0 +1,23 @@
+class update_dataspeed_pds_msgs_Temperature_3764fca95e9ceccf604d1840cb283527(MessageUpdateRule):
+	old_type = "dataspeed_pds_msgs/Temperature"
+	old_full_text = """
+# Temperature (C)
+float32 internal
+float32 external
+"""
+
+	new_type = "dataspeed_pds_msgs/Temperature"
+	new_full_text = """
+# Temperature (C)
+float32[3] internal
+float32[4] external
+"""
+
+	order = 0
+	migrated_types = []
+
+	valid = True
+
+	def update(self, old_msg, new_msg):
+		new_msg.internal = [old_msg.internal, float("NAN"), float("NAN")]
+		new_msg.external = [old_msg.external, float("NAN"), float("NAN"), float("NAN")]
