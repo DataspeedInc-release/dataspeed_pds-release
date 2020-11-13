@@ -1,3 +1,3 @@
 # Temperature (C)
-float32 internal
-float32 external
+float32[3] internal
+float32[4] external
