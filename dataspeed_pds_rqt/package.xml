@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>dataspeed_pds_rqt</name>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <description>
-    ROS rqt GUI for the Dataspeed Inc. Power Distribution System (PDS)
+    ROS rqt GUI for the Dataspeed Inc. Intelligent Power Distribution System (iPDS)
   </description>
 
   <license>BSD</license>
   <author email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</author>
   <author email="emyllyoja@dataspeedinc.com">Eric Myllyoja</author>
+  <author email="mlohrer@dataspeedinc.com">Michael Lohrer</author>
   <maintainer email="khallenbeck@dataspeedinc.com">Kevin Hallenbeck</maintainer>
-  <maintainer email="emyllyoja@dataspeedinc.com">Eric Myllyoja</maintainer>
+  <maintainer email="mlohrer@dataspeedinc.com">Michael Lohrer</maintainer>
   <url type="website">http://dataspeedinc.com</url>
   <url type="repository">https://bitbucket.org/dataspeedinc/dataspeed_pds</url>
   <url type="bugtracker">https://bitbucket.org/dataspeedinc/dataspeed_pds/issues</url>
