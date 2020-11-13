@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2017-2018, Dataspeed Inc.
+ *  Copyright (c) 2017-2020, Dataspeed Inc.
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -39,10 +39,17 @@
 namespace dataspeed_pds_can
 {
 
+enum {
+  REV_A = 1,
+  REV_B = 2,
+  REV_G = 7,
+  REV_H = 8,
+};
+
 typedef struct {
   // Master and slave status messages have the same structure.
-  // 4 Reserved/Unused bits.
-  uint8_t :4;
+  // Hardware revision (enum): Rev A=1, {B-F}=2, G=7, {H-I}=8
+  uint8_t rev :4;
   // Inverter Last Request (bool)
   uint8_t inverter_request :1;
   // Inverter Status (bool)
@@ -80,7 +87,7 @@ typedef struct {
   //   Voltage, in V.
   uint16_t voltage :12;
   // 4 Reserved/Unused bits.
-  uint8_t :4;
+  uint16_t :4;
 } MsgStatus2;
 
 typedef struct {
