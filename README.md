@@ -1,3 +1,32 @@
+## dataspeed_pds (melodic) - 1.0.6-1
+
+The packages in the `dataspeed_pds` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic dataspeed_pds` on `Fri, 13 Nov 2020 19:23:34 -0000`
+
+These packages were released:
+- `dataspeed_pds`
+- `dataspeed_pds_can`
+- `dataspeed_pds_lcm`
+- `dataspeed_pds_msgs`
+- `dataspeed_pds_rqt`
+- `dataspeed_pds_scripts`
+
+Version of package(s) in repository `dataspeed_pds`:
+
+- upstream repository: https://bitbucket.org/DataspeedInc/dataspeed_pds.git
+- release repository: https://github.com/DataspeedInc-release/dataspeed_pds-release.git
+- rosdistro version: `1.0.5-1`
+- old version: `1.0.5-1`
+- new version: `1.0.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## dataspeed_pds (noetic) - 1.0.5-1
 
 The packages in the `dataspeed_pds` repository were released into the `noetic` distro by running `/usr/bin/bloom-release dataspeed_pds --rosdistro noetic` on `Tue, 28 Jul 2020 14:52:29 -0000`
