@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2017-2018, Dataspeed Inc.
+ *  Copyright (c) 2017-2020, Dataspeed Inc.
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -100,8 +100,8 @@ void PdsNode::lcmRecvStatus(const lcm::ReceiveBuffer* buf, const std::string &ch
   // Convert to ROS message
   dataspeed_pds_msgs::Status msg;
   msg.header.stamp = now;
-  msg.mode.mode = lcm->mode;
-  msg.script.script = 0; ///@TODO: LCM message doesn't report script status
+  msg.mode.mode = (uint8_t)lcm->mode;
+  msg.script.script = (uint8_t)lcm->script;
   msg.chan.resize(12);
   for (size_t i = 0; i < 12; i++) {
     msg.chan[i].current = lcm->current[i];
@@ -111,8 +111,12 @@ void PdsNode::lcmRecvStatus(const lcm::ReceiveBuffer* buf, const std::string &ch
   msg.master.inverter.status   = (lcm->inverter_status & (1 << 1)) ? true : false;
   msg.master.inverter.overload = (lcm->inverter_status & (1 << 2)) ? true : false;
   msg.master.inverter.overtemp = (lcm->inverter_status & (1 << 3)) ? true : false;
-  msg.master.temp.internal = lcm->board_temp;
-  msg.master.temp.external = lcm->thermocouple;
+  for (size_t i = 0; i < sizeof(lcm->board_temp)/sizeof(lcm->board_temp[0]); i++) {
+    msg.master.temp.internal[i] = lcm->board_temp[i];
+  }
+  for (size_t i = 0; i < sizeof(lcm->thermocouple)/sizeof(lcm->thermocouple[0]); i++) {
+    msg.master.temp.external[i] = lcm->thermocouple[i];
+  }
   msg.master.voltage = lcm->voltage;
 
   // Publish for single unit, or forward to multi-unit synchronization
