@@ -1,0 +1,13 @@
+Source: ros-noetic-dataspeed-pds-rqt
+Section: misc
+Priority: optional
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), python3-setuptools, ros-noetic-catkin, ros-noetic-dataspeed-pds-msgs, ros-noetic-python-qt-binding, ros-noetic-rospy, ros-noetic-rqt-gui, ros-noetic-rqt-gui-py
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-noetic-dataspeed-pds-rqt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-dataspeed-pds-msgs, ros-noetic-python-qt-binding, ros-noetic-rospy, ros-noetic-rqt-gui, ros-noetic-rqt-gui-py
+Description: ROS rqt GUI for the Dataspeed Inc.
+ Intelligent Power Distribution System (iPDS)
