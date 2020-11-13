@@ -1,0 +1,13 @@
+Source: ros-melodic-dataspeed-pds
+Section: misc
+Priority: optional
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dataspeed-pds
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dataspeed-pds-can, ros-melodic-dataspeed-pds-lcm, ros-melodic-dataspeed-pds-msgs, ros-melodic-dataspeed-pds-scripts
+Description: Interface to the Dataspeed Inc.
+ Intelligent Power Distribution System (iPDS)
