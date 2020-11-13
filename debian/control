@@ -1,0 +1,13 @@
+Source: ros-melodic-dataspeed-pds-rqt
+Section: misc
+Priority: optional
+Maintainer: Kevin Hallenbeck <khallenbeck@dataspeedinc.com>
+Build-Depends: debhelper (>= 9.0.0), python-setuptools, ros-melodic-catkin, ros-melodic-dataspeed-pds-msgs, ros-melodic-python-qt-binding, ros-melodic-rospy, ros-melodic-rqt-gui, ros-melodic-rqt-gui-py
+Homepage: http://dataspeedinc.com
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dataspeed-pds-rqt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dataspeed-pds-msgs, ros-melodic-python-qt-binding, ros-melodic-rospy, ros-melodic-rqt-gui, ros-melodic-rqt-gui-py
+Description: ROS rqt GUI for the Dataspeed Inc.
+ Intelligent Power Distribution System (iPDS)
