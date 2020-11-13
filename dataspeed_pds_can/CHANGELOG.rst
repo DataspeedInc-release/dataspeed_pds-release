@@ -2,6 +2,13 @@
 Changelog for package dataspeed_pds_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2020-11-13)
+------------------
+* Updated license year for 2020
+* Renamed PDS to iPDS
+* Support new Temperature message
+* Contributors: Michael Lohrer
+
 1.0.5 (2020-07-28)
 ------------------
 

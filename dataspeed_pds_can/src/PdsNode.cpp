@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2017-2018, Dataspeed Inc.
+ *  Copyright (c) 2017-2020, Dataspeed Inc.
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -224,9 +224,25 @@ void PdsNode::recvSync(const std::vector<can_msgs::Frame::ConstPtr> &msgs, UnitI
     msg.master.inverter.status   = ptrS1->inverter_status;
     msg.master.inverter.overload = ptrS1->inverter_overload;
     msg.master.inverter.overtemp = ptrS1->inverter_overtemp;
-    msg.master.temp.internal = bytesToCelsius(ptrS2->board_temp);
-    msg.master.temp.external = bytesToCelsius(ptrS2->thermocouple_temp);
     msg.master.voltage = bytesToVoltage(ptrS2->voltage);
+
+    msg.master.temp.internal[0] = bytesToCelsius(ptrS2->board_temp);
+    if (ptrS1->rev >= REV_H) {
+      // In hardware >=RevH, three internal temperature sensors are present.
+      // However, CAN only reports the max of all three temps
+      msg.master.temp.internal[1] = msg.master.temp.internal[0];
+      msg.master.temp.internal[2] = msg.master.temp.internal[0];
+    } else {
+      msg.master.temp.internal[1] = NAN;
+      msg.master.temp.internal[2] = NAN;
+    }
+
+    // For now only 1 external temp sensor is supported.
+    // In the future 4 will be supported.
+    msg.master.temp.external[0] = bytesToCelsius(ptrS2->thermocouple_temp);
+    msg.master.temp.external[1] = NAN;
+    msg.master.temp.external[2] = NAN;
+    msg.master.temp.external[3] = NAN;
 
     // Publish for single unit, or forward to multi-unit synchronization
     const dataspeed_pds_msgs::Status::ConstPtr ptr(new dataspeed_pds_msgs::Status(msg));
